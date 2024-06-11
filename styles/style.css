@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.landing{
+    background: url(../images/bg-food.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(1px); */
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(250,250,250,.9);
+    padding: 5px;
+    z-index: 1;
+}
+header h1{
+    flex: 3;
+    min-width: 370px;
+    padding: .5em;
+    font-size: 2rem;
+    text-align: center;
+    filter: drop-shadow(1px 1px 1px red);
+    cursor: default;
+    animation-name: name;
+    animation-duration: 5s;
+    i{
+        padding-right: 10px;
+    }
+}
+span{
+    animation-name: s;
+    animation-duration: 5s;
+    /* animation-timing-function: 1; */
+}
+/* @keyframes s {
+    0%{
+        text-transform: lowercase;
+        transition: ease-in;
+    }
+    25%{
+        text-transform: uppercase;
+        transition: ease-in;
+    }
+    50%{
+        text-transform: uppercase;
+    }
+    100%{
+        transition: ease-in;
+    }
+    
+} */
+/* @keyframes name {
+    0%{
+        filter: drop-shadow(1px 1px 1px green);
+        
+    }
+    25%{
+        filter: drop-shadow(1px -1px 5px green);
+    }
+    50%{
+        filter: drop-shadow(1px -1px 8px red);
+    }
+    100%{
+        filter: drop-shadow(1px 1px 5px red);
+    }
+} */
+header nav{
+    flex: 2;
+    display: flex;
+    text-align: center;
+    /* flex-wrap: wrap; */
+
+}
+header nav a:nth-child(1){
+    flex: 1;
+    min-width: 105px;
+    /* flex-basis: 0; */
+    font-size: 20px;
+    color: rgb(7, 243, 7);
+}
+header nav a:nth-child(2){
+    flex: 1;
+    min-width: 105px;
+    font-size: 20px;
+    color: rgb(7, 243, 7);
+}
+header nav a{
+    text-decoration: none;
+    padding-right: 2px;
+}
+header nav a:hover{
+    filter: drop-shadow(1px 1px 1px black);
+}
+.main-text{
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px black;
+}
+.main-text h2:nth-child(1){
+    color: rgb(255, 2, 2);
+}
+.main-text h2:nth-child(2){
+    color: green;
+}
+.main-text h2:nth-child(3){
+    color:white;
+}
+.main-text button{
+    /* align-self: center;
+    margin-left: 50px; */
+    font-size: 1em;
+    border-radius: 12px;
+    padding: .4em;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    animation-name: runner;
+    filter: drop-shadow(1px 1px 1px);
+    animation-duration: 1s;
+
+
+}
+/* @keyframes runner {
+    0%{
+    filter: drop-shadow(3px 0px 1px);
+    }
+    25%{
+        filter: drop-shadow(0px 3px 1px);
+    }
+    50%{
+        filter: drop-shadow(-3px 0px 1px);
+    }
+    75%{
+        filter: drop-shadow(-3px -1px 1px);
+    }
+    100%{
+        filter: drop-shadow(1px -3px 1px);
+    }
+} */
+.main-text button:active{
+    filter: drop-shadow(-1px -1px 1px);
+
+}
+.menu{
+    color: whitesmoke;
+    background: linear-gradient(to right, rgb(54, 53, 53) 0%, rgb(116, 115, 115) 100%);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.menu h2{
+    text-align: center;
+    padding: 20px;
+    color: red;
+    text-shadow: 1px 1px 3px black;
+}
+.menu-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.menu-list table{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    td:nth-child(1){
+        flex-basis: 1;
+        align-content: flex-start;
+        padding-right: 110px;
+    }
+}
+.menu-list table *{
+    padding: 5px;
+}
+.menu-list th{
+    color: green;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 800;
+    outline-color: white;
+    outline-width: 1px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.menu table:nth-child(2){
+    grid-row: span 2;
+}
+i{
+    padding: 2px;
+}
+.container-location{
+    background: linear-gradient(to right, rgb(54, 53, 53) 0%, rgb(116, 115, 115) 100%);
+    text-transform: capitalize;
+    padding: 20px;
+    h2{
+        color: red;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+    }
+    .location{
+        display: flex;
+        flex-wrap: wrap;
+
+    h3{
+        padding-left: 10px;
+        color: green;
+        text-shadow: 1px 1px 1px black;
+    }
+    div{
+        flex: 1;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pre{
+            color: whitesmoke;
+            padding-top: 15px;
+            line-height: 1.5em;
+            font-size: 1rem;
+        }
+    }
+    }
+}
+.footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    .other-links{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding-bottom: 10px;
+    }
+    .other-links i{
+        padding: 5px;
+        background-color: rgba(128, 128, 128, 0.377);
+        border-radius: 13px;
+        color: white;
+    }
+    .other-links i:hover{
+        transform: translateY(-1px);
+        transition: ease-out background,background-color;
+        transition-duration: 1s;
+    }
+    .other-links #fb:hover{
+        background-color: blue;
+        filter: drop-shadow(1px 1px 10px blue);
+
+    }
+    .other-links #insta:hover{
+        background: linear-gradient(to right, red, rgb(253, 3, 86));
+        filter: drop-shadow(1px 1px 10px rgb(253, 3, 86));
+    }
+    .other-links #twitter:hover{
+        background-color: black;
+        filter: drop-shadow(1px 1px 10px white);
+    }
+    .copy-write p{
+        font-weight: 700;
+    }
+}
